@@ -10,7 +10,8 @@ while True:
 		print(len(data))
 		data = wv.moving_average(data[:-1])
 		print(rate)
-		rate /= 252
+		rate /= 175
+		# 7665 / 252 = 1341375 / 44100 = 30.416667
 		print(len(data))
 		meter = pyln.Meter(rate) # create BS.1770 meter
 		loudness = meter.integrated_loudness(data) # measure loudness
