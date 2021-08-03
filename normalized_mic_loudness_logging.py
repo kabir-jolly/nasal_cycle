@@ -2,7 +2,7 @@ import soundfile as sf
 import pyloudnorm as pyln
 
 while True:
-	filepath = input("Enter a .wav file to get it's normalized loudness: ")
+	filepath = input("Enter a .wav filepath to get it's normalized loudness: ")
 	if (len(filepath) != 0):
 		data, rate = sf.read(filepath) # load audio
 
