@@ -8,6 +8,7 @@ from prelim_mic_testing import visualize
 WAV_FILE_NAME = input("Enter a .wav filepath to apply a bandpass filter on it: ")
 highcut = 10000.0 # 10kHz highpass filter
 FRAME_RATE = 44100
+
 # def orders 5-5-6
 def butter_bandpass(highcut, fs, order=3):
     nyq = 0.5 * fs

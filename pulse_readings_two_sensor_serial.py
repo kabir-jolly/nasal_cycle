@@ -40,11 +40,10 @@ plt.ylabel('PPG Sensor Pulse Readings')
 plt.legend()
 plt.show()
 
-# uncomment below to save results to a file
+# comment/uncomment for saving results to a file
 
-"""
+
 data_dumping_file = open("raw_readings.txt", "w")
 data_dumping_file.write(str(data_dumping_arr))
 
 data_dumping_file.close()
-"""
