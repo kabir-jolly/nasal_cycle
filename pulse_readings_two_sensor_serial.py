@@ -1,6 +1,6 @@
 import serial
 import time
-import numpy
+import numpy as np
 from matplotlib import pyplot as plt
 from tqdm import  tqdm
 import pandas as pd
@@ -56,8 +56,9 @@ plt.show()
 
 # comment/uncomment for saving results to a file
 
-
+"""
 data_dumping_file = open("raw_readings.txt", "w")
 data_dumping_file.write(str(data_dumping_arr))
 
 data_dumping_file.close()
+"""
