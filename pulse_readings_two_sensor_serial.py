@@ -13,13 +13,13 @@ x = []
 data_dumping_arr = []
 
 # collect N datapoints
-N = 500
+N = 1000
 for i in tqdm(range(N)):
     try:
         # grab both sensor datapoints
         data_point = s.readline().strip().decode("utf-8")
-        sensor_a_reading = int(data_point.split(',')[1])
-        sensor_b_reading = int(data_point.split(',')[0])
+        sensor_a_reading = int(data_point.split(',')[0])
+        sensor_b_reading = int(data_point.split(',')[1])
         sensor_a_readings.append(sensor_a_reading)
         sensor_b_readings.append(sensor_b_reading)
 
@@ -33,8 +33,8 @@ for i in tqdm(range(N)):
 
 assert len(sensor_a_readings) == len(x) and len(sensor_b_readings) == len(x)
 # graph output
-plt.plot(x, sensor_a_readings, label = "Sensor A Data")
-plt.plot(x, sensor_b_readings, label = "Sensor B Data")
+plt.plot(x, sensor_a_readings, label = "Sensor A [Left]")
+plt.plot(x, sensor_b_readings, label = "Sensor B [Right]")
 plt.xlabel('Time')
 plt.ylabel('PPG Sensor Pulse Readings')
 plt.legend()
