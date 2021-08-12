@@ -6,5 +6,6 @@ filepath = input("Enter a .wav filepath to get it's FFT: ")
 rate, data = wav.read(filepath)
 fft_out = fft(data)
 
-plt.plot(data, np.abs(fft_out))
+plt.plot(data, fft_out)
+plt.xlim([0, 6000])
 plt.show()

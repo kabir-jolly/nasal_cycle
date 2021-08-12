@@ -1,4 +1,3 @@
-# imports
 import matplotlib.pyplot as plt
 import numpy as np
 import wave, sys
@@ -57,23 +56,16 @@ def visualize(path: str):
 	# plt.plot(time, amplitude_envelope, label = "Envelope")
 	# plt.plot(X_, Y_, label = "Envelope")
 
-
 	#plt.plot(X_, np.abs(f_cubic(X_)), label = "Envelope")
-	
 
 	plt.legend()
-	print(signal[:30])
-	with open('time.npy', 'wb') as f:
-		np.save(f, time)
-	with open('signal.npy', 'wb') as f:
-		np.save(f, signal)
-	# shows the plot
-	# in new window
+	# print(signal[:30])
+	# with open('time.npy', 'wb') as f:
+	# 	np.save(f, time)
+	# with open('signal.npy', 'wb') as f:
+	# 	np.save(f, signal)
 	plt.grid()
 	plt.show()
-
-	# you can also save
-	# the plot using
 	# plt.savefig('filename')
 
 

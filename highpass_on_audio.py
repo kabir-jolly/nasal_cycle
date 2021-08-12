@@ -27,7 +27,8 @@ def bandpass_filter(buffer):
 samplerate, data = wavfile.read(WAV_FILE_NAME)
 assert samplerate == FRAME_RATE
 filtered = np.apply_along_axis(bandpass_filter, 0, data).astype('int16')
-filename = 'filtered_audio_highpass.wav'
+file_title = WAV_FILE_NAME.split('/')[-1]
+filename = f"filtered_audio_highpass_{file_title}"
 wavfile.write(filename, samplerate, filtered)
 
 visualize(filename)

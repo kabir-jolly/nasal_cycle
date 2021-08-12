@@ -1,6 +1,6 @@
 from pydub import AudioSegment
 
-filepath = "/Users/kabirjolly/Library/Mobile Documents/com~apple~CloudDocs/Microphone Recordings/7_22 Testing/Microphone_R_Test2_Trial2.wav"
+filepath = "/Users/kabirjolly/Documents/NasalCycleProject/filtered_audio_highpass_Microphone_R_open.wav"
 recording = AudioSegment.from_wav(filepath)
 three_sec = 3000
 # 3-6, 9-12, 15-18, 21-24, 27-30
