@@ -5,9 +5,11 @@ from scipy.io import wavfile
 from scipy.signal import butter, lfilter
 
 WAV_FILE_NAME = input("Enter a .wav filepath to apply a bandpass filter on it: ")
+# Attempted replication of Tahamiler et al.
 lowcut = 10.0
 highcut = 150.0
 FRAME_RATE = 44100
+
 # def orders 5-5-6
 def butter_bandpass(lowcut, highcut, fs, order=3):
     nyq = 0.5 * fs

@@ -1,4 +1,5 @@
 # https://dsp.stackexchange.com/questions/56604/bandpass-filter-for-audio-wav-file
+# same as bandpass approach but removes the lowpass filtering
 import numpy as np
 import os
 from scipy.io import wavfile

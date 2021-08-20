@@ -5,6 +5,7 @@ import math
 import statsmodels.api as sm
 import scipy as sp
 
+# taken largely from Paris' code, creates FFT and calcs power
 def fft(data):
 	sampling_frequency = 44100
 	L = len(data)

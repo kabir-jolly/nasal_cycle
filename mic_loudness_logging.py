@@ -6,7 +6,7 @@ while True:
 	filepath = input("Enter a .wav file to get it's loudness: ")
 	if (len(filepath) != 0):
 		data, rate = sf.read(filepath) # load audio (with shape (samples, channels))
-		# 44100 hz
+		# rate: 44100 hz
 		print(len(data))
 		# use below when not even multiple of 175
 		# ADJUSTMENT_CONSTANT = -1

@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import statsmodels.api as sm
 
+# plot OLS line against y vs. y data to look at linearity
 def OLS(sensor_a_data , sensor_b_data):
 	X = sm.add_constant(sensor_a_data)
 	model = sm.OLS(sensor_b_data, X)
@@ -18,7 +19,6 @@ def OLS(sensor_a_data , sensor_b_data):
 	y_predict = intercept + slope * sensor_a_data
 	return y_predict
 
-# load numpy data
 FILEPATH = "two_pulse_sensors_readings.csv"
 sensor_df = pd.read_csv(FILEPATH)
 print(sensor_df.head())

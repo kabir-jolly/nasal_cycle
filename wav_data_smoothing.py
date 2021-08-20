@@ -6,6 +6,7 @@ from scipy.interpolate import make_interp_spline
 from scipy.interpolate import interp1d
 
 def moving_average(x):
+	# convolutional vs. averaging approaches
 	return np.mean(np.array(x).reshape(-1, 175), axis=1)
     # return np.convolve(x, np.ones(w), 'valid') / w
 
