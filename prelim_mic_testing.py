@@ -36,7 +36,6 @@ def visualize(path: str):
 	# title of the plot
 	file_title = path.split('/')[-1]
 	plt.title(f"Sound Wave for file {file_title}")
-	
 	plt.xlabel("Time")
 	
 	PLOT_INTERVAL = 1
