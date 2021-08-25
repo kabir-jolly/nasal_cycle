@@ -30,6 +30,9 @@ Takes PPG sensor readings by establishing a serial connection. Saves them to a f
 ## wav_data_smoothing.py
 Two attempts at smoothing the data by (1) using a moving average across sets of timesteps in the audio file and (2) using a convolutional based approach to downsample the input.
 
+## calculate_energy.py
+Calculates the energy value of an input audio file. Does this before and after removing ambient noise. This is done by feeding in another audio file containing a recording of ambient noise in the room and subtracts it from the recorded exhalations.
+
 ## data_and_ouputs
 Graphs, data dumps, and audio files used before and after processing.
 
