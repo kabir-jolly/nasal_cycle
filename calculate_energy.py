@@ -36,14 +36,16 @@ def visualize(data):
 	)
 	plt.title("Plotting microphone exhalations with ambient noise removed")
 	plt.plot(time, data)
+	plt.show()
 
 
 if __name__ == "__main__":
-	samplerate, data = wavfile.read(WAV_FILEPATH)
+	samplerate, data = wavfile.read(MIC_FILEPATH)
 	energy_before = calculate_energy(data)
 	print(f"Energy before ambience removal: {energy_before}")
 	assert samplerate == FRAME_RATE
-	data = remove_ambience(MIC_FILEPATH, AMBIENCE_FILEPATH)
-	energy_after = calculate_energy(data)
-	print(f"Energy after ambience removal: {energy_after}")
+	if AMBIENCE_FILEPATH != "":
+		data = remove_ambience(MIC_FILEPATH, AMBIENCE_FILEPATH)
+		energy_after = calculate_energy(data)
+		print(f"Energy after ambience removal: {energy_after}")
 	visualize(data)
